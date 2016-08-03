@@ -1,0 +1,28 @@
+{
+  "name": "cucumber-webdriver-js",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "uc211264",
+  "contributors": [],
+  "dependencies": {},
+  "description": "Cucumber Webdriver JS project for functional testing",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhinnyc/cucumber-webdriver-js.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidhinnyc/cucumber-webdriver-js/issues"
+  },
+  "homepage": "https://github.com/nidhinnyc/cucumber-webdriver-js#readme"
+}
