@@ -11,13 +11,13 @@
   "author": "uc211264",
   "contributors": [],
   "dependencies": {
-    "cucumber": "^1.2.1",
-    "selenium-webdriver": "^2.53.3"
+    "cucumber": "latest",
+    "selenium-webdriver": "latest"
   },
   "description": "Cucumber Webdriver JS project for functional testing",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cucumber-js --format pretty"
   },
   "repository": {
     "type": "git",
