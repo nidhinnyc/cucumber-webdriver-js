@@ -10,7 +10,10 @@
   ],
   "author": "uc211264",
   "contributors": [],
-  "dependencies": {},
+  "dependencies": {
+    "cucumber": "^1.2.1",
+    "selenium-webdriver": "^2.53.3"
+  },
   "description": "Cucumber Webdriver JS project for functional testing",
   "main": "main.js",
   "scripts": {
