@@ -1,31 +1,18 @@
 {
-  "name": "cucumber-webdriver-js",
-  "version": "1.0.0",
-  "keywords": [
-    "util",
-    "functional",
-    "server",
-    "client",
-    "browser"
-  ],
-  "author": "uc211264",
-  "contributors": [],
-  "dependencies": {
-    "cucumber": "latest",
-    "selenium-webdriver": "latest"
+  "name": "cucumber-js-selenium-webdriver-example",
+  "version": "0.0.1",
+  "description": "A starter for acceptance testing using cucumber-js and webdriver-js.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Matt-B/cucumber-js-selenium-webdriver-example.git"
   },
-  "description": "Cucumber Webdriver JS project for functional testing",
-  "main": "main.js",
   "scripts": {
     "test": "cucumber-js --format pretty"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nidhinnyc/cucumber-webdriver-js.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nidhinnyc/cucumber-webdriver-js/issues"
-  },
-  "homepage": "https://github.com/nidhinnyc/cucumber-webdriver-js#readme"
+  "devDependencies": {
+    "cucumber": "^0.10.2",
+    "selenium-webdriver": "^2.53.2",
+    "chai": "^3.5.0",
+    "sanitize-filename": "^1.6.0"
+  }
 }

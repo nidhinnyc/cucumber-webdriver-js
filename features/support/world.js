@@ -1,8 +1,39 @@
-var driver = require('selenium-webdriver');
+'use strict';
 
-var World = function World(callback) {
-  this.browser = new driver.Builder().withCapabilities(driver.Capabilities.chrome()).build(); // this.browser will be available in step definitions
+var fs = require('fs');
+var webdriver = require('selenium-webdriver');
+var driver;
 
+var buildChromeDriver = function() {
+  return new webdriver.Builder().
+    withCapabilities(webdriver.Capabilities.chrome()).
+    build();
 };
 
-exports.World = World;
+var getDriver = function() {
+   driver = buildChromeDriver();
+  return driver;
+};
+
+var World = function World() {
+
+  var defaultTimeout = 20000;
+  var screenshotPath = "screenshots";
+
+  this.webdriver = webdriver;
+  this.driver = driver;
+
+  if(!fs.existsSync(screenshotPath)) {
+    fs.mkdirSync(screenshotPath);
+  }
+
+  this.waitFor = function(cssLocator, timeout) {
+    var waitTimeout = timeout || defaultTimeout;
+    return driver.wait(function() {
+      return driver.isElementPresent({ css: cssLocator });
+    }, waitTimeout);
+  };
+};
+
+module.exports.World = World;
+module.exports.getDriver = getDriver;
