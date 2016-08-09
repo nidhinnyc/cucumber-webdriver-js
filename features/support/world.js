@@ -1,7 +1,8 @@
 'use strict';
 
 var fs = require('fs');
-var webdriver = require('selenium-webdriver');
+var webdriver = require('selenium-webdriver'),
+    By = webdriver.By;
 var driver;
 
 var buildChromeDriver = function() {
@@ -22,15 +23,16 @@ var World = function World() {
 
   this.webdriver = webdriver;
   this.driver = driver;
+  this.By = By;
 
   if(!fs.existsSync(screenshotPath)) {
     fs.mkdirSync(screenshotPath);
   }
 
-  this.waitFor = function(cssLocator, timeout) {
+  this.waitFor = function(locator, timeout) {
     var waitTimeout = timeout || defaultTimeout;
     return driver.wait(function() {
-      return driver.isElementPresent({ css: cssLocator });
+      return driver.isElementPresent({ css: locator });
     }, waitTimeout);
   };
 };
