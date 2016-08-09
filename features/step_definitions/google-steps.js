@@ -6,7 +6,7 @@ module.exports = function() {
   this.World = require('../support/world.js').World;
 
   this.Given(/^User access Google$/, function(){
-      return this.driver.get('http://www.google.co.uk/webhp?complete=0');
+      return this.driver.get('http://www.google.com');
   });
 
   this.When(/^I search Google for "([^"]*)"$/, function (searchQuery) {
