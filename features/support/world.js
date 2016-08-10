@@ -4,15 +4,18 @@ var fs = require('fs');
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By;
 var driver;
+require('chromedriver');
 
 var buildChromeDriver = function() {
   return new webdriver.Builder().
-    withCapabilities(webdriver.Capabilities.chrome()).
+    //withCapabilities(webdriver.Capabilities.chrome()).
+    forBrowser('chrome').
     build();
 };
 
 var getDriver = function() {
    driver = buildChromeDriver();
+   driver.manage().window().maximize();
   return driver;
 };
 
