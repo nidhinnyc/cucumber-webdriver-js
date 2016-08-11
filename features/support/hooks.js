@@ -22,7 +22,6 @@ var myHooks = function () {
   this.registerHandler('AfterFeatures', function (event) {
     return driver.quit();
   });
-
 };
 
 module.exports = myHooks;
