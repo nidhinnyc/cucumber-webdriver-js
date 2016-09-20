@@ -3,7 +3,7 @@ Feature: Searching for cucumbers
   In order to find out more about cucumbers
   I want to be able to search for information about cucumbers
 
-  Scenario: Google cucumber search
-    Given User access Google
-    When I search Google for "cucumbers"
-    Then I should see some results
+  # Scenario: Google cucumber search
+  #  Given User access Google
+  #  When I search Google for "cucumbers"
+  #  Then I should see some results

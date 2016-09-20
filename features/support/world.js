@@ -2,7 +2,8 @@
 
 var fs = require('fs');
 var webdriver = require('selenium-webdriver'),
-    By = webdriver.By;
+    By = webdriver.By,
+    until = webdriver.until;
 var driver;
 require('chromedriver');
 
@@ -27,6 +28,7 @@ var World = function World() {
   this.webdriver = webdriver;
   this.driver = driver;
   this.By = By;
+  this.until = until;
 
   if(!fs.existsSync(screenshotPath)) {
     fs.mkdirSync(screenshotPath);
