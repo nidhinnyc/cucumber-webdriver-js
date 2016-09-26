@@ -13,7 +13,6 @@ module.exports = function() {
 
     return this.driver.findElement({ linkText: 'Sign up' })
       .click();
-
   });
 
   this.Then(/^Signup page should be shown with options to signup with Google and Email$/, function () {
